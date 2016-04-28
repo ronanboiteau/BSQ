@@ -3,8 +3,8 @@ EPITECH // C program that finds the biggest square in a map.<br/>
 I did this project during my first year as a student at EPITECH.
 
 ### Options
-• __-v__ : verbose<br/>
-• __-c__ : turn on colors
+__-v :__ verbose<br/>
+__-c :__ turn on colors
 
 ### How to use BSQ?
 • The map file is passed to the program as an argument.<br/>
