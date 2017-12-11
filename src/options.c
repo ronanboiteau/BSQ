@@ -1,13 +1,3 @@
-/*
-** options.c for bsq in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Fri Dec 18 00:30:36 2015 Ronan Boiteau
-** Last update Fri Dec 18 22:42:25 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 
 int		_is_option_active(const char *opt_list, const char option)

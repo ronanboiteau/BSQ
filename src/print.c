@@ -1,13 +1,3 @@
-/*
-** print.c for bsq in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Wed Dec 16 16:39:59 2015 Ronan Boiteau
-** Last update Sun Dec 20 17:24:22 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 #include "bsq_board.h"
 #include "bsq_solver.h"

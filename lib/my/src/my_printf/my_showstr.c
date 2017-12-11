@@ -1,13 +1,3 @@
-/*
-** my_showstr.c for my_showstr in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Mon Oct 19 00:11:18 2015 Ronan Boiteau
-** Last update Thu Dec 17 23:35:36 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 #include "printf_puts.h"
 

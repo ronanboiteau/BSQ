@@ -1,13 +1,3 @@
-/*
-** match.c for match in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sun Oct  4 00:18:09 2015 Ronan Boiteau
-** Last update Fri Dec  4 19:05:25 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 
 int		match(const char *str1, const char *str2)

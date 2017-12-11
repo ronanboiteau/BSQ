@@ -1,13 +1,3 @@
-/*
-** my_strupcase.c for my_strupcase in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sun Oct 18 16:56:12 2015 Ronan Boiteau
-** Last update Thu Dec 17 23:24:07 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 
 char		*my_strupcase(char *str)

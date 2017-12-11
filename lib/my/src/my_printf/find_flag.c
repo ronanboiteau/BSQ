@@ -1,13 +1,3 @@
-/*
-** find_flag.c for my_printf in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sat Nov 14 09:13:48 2015 Ronan Boiteau
-** Last update Thu Dec 17 23:30:51 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"

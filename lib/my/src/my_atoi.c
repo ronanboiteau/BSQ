@@ -1,13 +1,3 @@
-/*
-** my_atoi.c for my_atoi in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Fri Dec 18 02:12:36 2015 Ronan Boiteau
-** Last update Fri Dec 18 02:12:43 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 
 static int	_skip_letters(const char *str)

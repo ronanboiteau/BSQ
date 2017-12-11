@@ -1,13 +1,3 @@
-/*
-** check_file.c for bsq in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Thu Dec 17 20:49:06 2015 Ronan Boiteau
-** Last update Sat Dec 19 15:21:19 2015 Ronan Boiteau
-*/
-
 #include "my.h"
 #include "bsq_board.h"
 #include "bsq_exit.h"
