@@ -1,5 +1,7 @@
 # BSQ
+
 {EPITECH.} first year project.
+
 C program that finds the biggest square in a map using a homemade algorithm.
 
 ## Requirements
