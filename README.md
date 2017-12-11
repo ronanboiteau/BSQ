@@ -1,18 +1,33 @@
 # BSQ
-EPITECH // C program that finds the biggest square in a map.<br/>
-I did this project during my first year as a student at EPITECH.
+{EPITECH.} first year project.
+C program that finds the biggest square in a map using a homemade algorithm.
 
-### Options
-__-v :__ verbose<br/>
-__-c :__ turn on colors
+## Requirements
 
-### How to use BSQ?
-• The map file is passed to the program as an argument.<br/>
-• BSQ finds the biggest square and ouputs the result.
+ - [Make](https://www.gnu.org/software/make/)
+ - [GCC](https://gcc.gnu.org/)
 
-### Map format
-• You can find a map sample in __map.txt__.<br/>
-• The first line is the number of lines in the map.<br/>
-• The map is only made of '.' (empty) and 'o' (obstacles) symbols.<br/>
-• The map is always a rectangle.<br/>
-• All lines are the same size.
+## Compilation
+
+Navigate to the root of the repository from your Terminal and run this command to build the `bsq` executable file:
+```
+make
+```
+
+## How to use BSQ?
+Pass a map file to the program as an argument when running BSQ:
+```
+./bsq map.txt
+```
+BSQ finds the biggest square and ouputs the result.
+
+## Map format
+ - You can find a sample in the file `map.txt`.
+ - The first line is the number of lines in the map.
+ - The map is only made of `.` (empty) and `o` (obstacles) symbols.
+ - The map is always a rectangle.
+ - All lines are the same size.
+
+## Options
+ - `-v` : verbose mode
+ - `-c` : enable colorized output
