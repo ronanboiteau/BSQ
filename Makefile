@@ -11,24 +11,26 @@
 NAME	= bsq
 
 IDIR	= include/
+IDIR_MY	= lib/my/include/
 
 LIB	= libmy.a
 LNAME	= my
 LDIR	= lib/my
 
 CC	= gcc
-CFLAGS	+= -I $(IDIR)
+CFLAGS	+= -I $(IDIR) -I $(IDIR_MY)
 CFLAGS	+= -Wall -Wextra -ansi
 CFLAGS	+= -Werror
 
-SDIR	= src/
-SRCS	= $(SDIR)check_file.c				\
-	  $(SDIR)exit.c					\
-	  $(SDIR)get_content.c				\
-	  $(SDIR)main.c					\
-	  $(SDIR)options.c				\
-	  $(SDIR)print.c				\
-	  $(SDIR)solver.c
+SRCS_DIR	= src/
+SRCS_FILES	= check_file.c		\
+		  exit.c		\
+		  get_content.c		\
+		  main.c		\
+		  options.c		\
+		  print.c		\
+		  solver.c
+SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -38,18 +40,18 @@ RM	= rm -f
 all: $(LIB) $(NAME)
 
 $(LIB):
-	cd $(LDIR) && $(MAKE)
+	make -C $(LDIR)
 
 $(NAME): $(OBJS)
 	$(CC) -o $(NAME) $(OBJS) -L lib -l $(LNAME)
 
 clean:
 	$(RM) $(OBJS)
-	cd $(LDIR) && $(MAKE) clean
+	make -C $(LDIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	cd $(LDIR) && $(MAKE) fclean
+	make -C $(LDIR) fclean
 
 re: fclean all
 

@@ -75,6 +75,7 @@ static char	*_get_lines_str(char *file_content)
   uint		idx;
   char		*lines_str;
 
+  idx = 0;
   while (file_content[idx] != C_EOL)
     idx += 1;
   if ((lines_str = malloc(sizeof(char) * (idx + 1))) == NULL)
