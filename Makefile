@@ -1,13 +1,3 @@
-##
-## Makefile for bsq in /home/boitea_r/c/bsq/CPE_2015_BSQ
-## 
-## Made by Ronan Boiteau
-## Login   <boitea_r@epitech.net>
-## 
-## Started on  Mon Dec 21 12:05:25 2015 Ronan Boiteau
-## Last update Mon Dec 21 12:05:25 2015 Ronan Boiteau
-##
-
 NAME	= bsq
 
 IDIR	= include/
