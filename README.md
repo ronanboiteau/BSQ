@@ -28,5 +28,9 @@ BSQ finds the biggest square and ouputs the result.
  - All lines are the same size.
 
 ## Options
- - `-v` : verbose mode
- - `-c` : enable colorized output
+ - `-v`: verbose mode
+ - `-c`: enable colorized output
+
+## Author
+
+* **Ronan Boiteau** ([GitHub](https://github.com/ronanboiteau) / [LinkedIn](https://www.linkedin.com/in/ronanboiteau/))
