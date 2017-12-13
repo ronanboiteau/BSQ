@@ -1,13 +1,3 @@
-/*
-** my_macro.h for libmy in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue Oct 27 14:04:25 2015 Ronan Boiteau
-** Last update Fri Dec 18 22:32:23 2015 Ronan Boiteau
-*/
-
 #ifndef MY_MACRO_H_
 # define MY_MACRO_H_
 

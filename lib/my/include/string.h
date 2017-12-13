@@ -1,13 +1,3 @@
-/*
-** string.h for libmy in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue Nov 10 16:11:56 2015 Ronan Boiteau
-** Last update Fri Dec  4 22:36:44 2015 Ronan Boiteau
-*/
-
 #ifndef STRING_H_
 # define STRING_H_
 

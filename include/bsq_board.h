@@ -1,13 +1,3 @@
-/*
-** bsq_board.h for bsq in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue Dec 15 17:33:43 2015 Ronan Boiteau
-** Last update Fri Dec 18 21:30:07 2015 Ronan Boiteau
-*/
-
 #ifndef BSQ_BOARD_H_
 # define BSQ_BOARD_H_
 

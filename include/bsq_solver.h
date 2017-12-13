@@ -1,13 +1,3 @@
-/*
-** bsq_solver.h for bsq in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Mon Dec 14 23:07:33 2015 Ronan Boiteau
-** Last update Fri Dec 18 23:31:25 2015 Ronan Boiteau
-*/
-
 #ifndef BSQ_SOLVER_H_
 # define BSQ_SOLVER_H_
 
