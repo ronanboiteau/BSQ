@@ -50,12 +50,19 @@ void		_print_result(const t_coords *square,
   unsigned int	idx_col;
   char		**final_board;
 
-  if ((final_board = malloc(sizeof(char *) * board->lines)) == NULL)
+  if ((final_board = malloc(sizeof(char *) * (board->lines + 1))) == NULL)
     my_exit(EXIT_FAILURE, ERR_MALLOC);
   idx_line = 0;
   while (idx_line < board->lines)
     {
-      final_board[idx_line] = my_strdup(board->tab[idx_line]);
+      if ((final_board[idx_line] = malloc(sizeof(char *) * (board->cols + 1))) == NULL)
+	my_exit(EXIT_FAILURE, ERR_MALLOC);
+      idx_col = 0;
+      while (idx_col <= board->cols)
+	{
+	  final_board[idx_line][idx_col] = board->tab[idx_line][idx_col];
+	  idx_col += 1;
+	}
       idx_line += 1;
     }
   final_board[idx_line] = NULL;

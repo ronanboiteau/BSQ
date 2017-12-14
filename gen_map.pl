@@ -2,7 +2,7 @@
 
 if ((scalar @ARGV) != 3)
 {
-    print "program x y density\n";
+    print "$0 [X] [Y] [DENSITY]\n";
     exit;
 }
 
