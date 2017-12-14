@@ -2,7 +2,7 @@
 
 if ((scalar @ARGV) != 3)
 {
-    print "$0 [X] [Y] [DENSITY]\n";
+    print "$0 [COLS] [LINES] [DENSITY]\n";
     exit;
 }
 
