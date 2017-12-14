@@ -1,8 +1,10 @@
+#include <stdbool.h>
+#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
 
-static uint	_if_not_flag(int fd, uint printed, t_string *str)
+static t_uint	_if_not_flag(int fd, t_uint printed, t_cstring *str)
 {
   int		space;
 
@@ -10,13 +12,13 @@ static uint	_if_not_flag(int fd, uint printed, t_string *str)
     str->idx -= 1;
   printed += my_putchar_fd(fd, '%');
   str->idx += 1;
-  space = FALSE;
+  space = false;
   while (str->str[str->idx] && !_char_isletter(str->str[str->idx]))
     {
-      if (str->str[str->idx] == ' ' && space == FALSE)
+      if (str->str[str->idx] == ' ' && space == false)
 	{
 	  printed += my_putchar_fd(fd, ' ');
-	  space = TRUE;
+	  space = true;
 	}
       str->idx += 1;
     }
@@ -26,14 +28,14 @@ static uint	_if_not_flag(int fd, uint printed, t_string *str)
   return (printed);
 }
 
-static uint	_flags_handler(int fd,
+static t_uint	_flags_handler(int fd,
 			       t_flag *flags,
-			       t_string *str,
+			       t_cstring *str,
 			       va_list ap)
 {
   const char	*specifiers;
   int		idx;
-  uint		printed;
+  t_uint	printed;
 
   printed = 0;
   specifiers = _find_flag(str, &printed, fd, ap);
@@ -51,8 +53,8 @@ static uint	_flags_handler(int fd,
 int		my_dprintf(int fd, const char *format, ...)
 {
   va_list	ap;
-  uint		printed;
-  t_string	str;
+  t_uint	printed;
+  t_cstring	str;
   t_flag	flags[FLAGS_NBR];
 
   printed = 0;
@@ -77,8 +79,8 @@ int		my_dprintf(int fd, const char *format, ...)
 int		my_printf(const char *format, ...)
 {
   va_list	ap;
-  uint		printed;
-  t_string	str;
+  t_uint	printed;
+  t_cstring	str;
   t_flag	flags[FLAGS_NBR];
 
   printed = 0;
@@ -103,7 +105,7 @@ int		my_printf(const char *format, ...)
 void		my_exit(int exit_code, const char *format, ...)
 {
   va_list	ap;
-  t_string	str;
+  t_cstring	str;
   t_flag	flags[FLAGS_NBR];
 
   _init_structures(flags, &str, format);

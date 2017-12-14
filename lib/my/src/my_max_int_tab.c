@@ -1,8 +1,8 @@
 #include "my.h"
 
-int		my_max_int_tab(const int *tab, const uint size)
+int		my_max_int_tab(const int *tab, const t_uint size)
 {
-  uint		idx;
+  t_uint	idx;
   int		greatest;
 
   idx = 0;

@@ -2,7 +2,5 @@
 
 int		my_char_islower(const char letter)
 {
-  if (!(letter >= 'a' && letter <= 'z'))
-    return (FALSE);
-  return (TRUE);
+  return (letter >= 'a' && letter <= 'z');
 }

@@ -1,16 +1,17 @@
+#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
 
-uint		_print_str(int fd, uint printed, va_list ap)
+t_uint		_print_str(int fd, t_uint printed, va_list ap)
 {
   printed += my_putstr_fd(fd, va_arg(ap, const char *));
   return (printed);
 }
 
-uint		_str_non_printable(int fd, uint printed, va_list ap)
+t_uint		_str_non_printable(int fd, t_uint printed, va_list ap)
 {
-  uint		idx;
+  t_uint	idx;
   char		*str;
 
   str = va_arg(ap, char *);

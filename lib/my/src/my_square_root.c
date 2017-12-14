@@ -2,13 +2,13 @@
 
 int		my_square_root(const int nbr)
 {
-  ll		tmp;
+  t_ll		tmp;
   int		result;
 
   result = 0;
   if (nbr >= 0)
     {
-      while ((tmp = (ll)result * (ll)result) != nbr && result <= nbr)
+      while ((tmp = (t_ll)result * (t_ll)result) != nbr && result <= nbr)
 	result += 1;
     }
   else

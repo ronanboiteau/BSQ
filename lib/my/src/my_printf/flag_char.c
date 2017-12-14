@@ -2,7 +2,7 @@
 #include "printf_flags.h"
 #include "printf_puts.h"
 
-uint		_print_char(int fd, uint printed, va_list ap)
+t_uint		_print_char(int fd, t_uint printed, va_list ap)
 {
   printed += my_putchar_fd(fd, va_arg(ap, int));
   return (printed);

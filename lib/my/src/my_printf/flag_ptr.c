@@ -1,8 +1,9 @@
+#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
 
-uint		_ptr_to_hex(int fd, uint printed, va_list ap)
+t_uint		_ptr_to_hex(int fd, t_uint printed, va_list ap)
 {
   int		*ptr;
 
@@ -13,11 +14,11 @@ uint		_ptr_to_hex(int fd, uint printed, va_list ap)
       return (my_strlen("(nil)"));
     }
   printed += my_putstr_fd(fd, "0x");
-  printed += my_putnbr_base_ull(fd, (ull)ptr, "0123456789abcdef");
+  printed += my_putnbr_base_ull(fd, (t_ull)ptr, "0123456789abcdef");
   return (printed);
 }
 
-uint		_ptr_printed_chars(int fd, uint printed, va_list ap)
+t_uint		_ptr_printed_chars(int fd, t_uint printed, va_list ap)
 {
   int		*ptr;
 

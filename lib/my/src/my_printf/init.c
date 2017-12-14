@@ -1,8 +1,8 @@
 #include "printf_flags.h"
 
 int		_init_flag(char flag_char,
-			   uint (*fct)(int fd,
-				       uint printed,
+			   t_uint (*fct)(int fd,
+				       t_uint printed,
 				       va_list ap),
 			   t_flag *flags)
 {
@@ -12,7 +12,7 @@ int		_init_flag(char flag_char,
 }
 
 void		_init_structures(t_flag *flags,
-				 t_string *str,
+				 t_cstring *str,
 				 const char *format)
 {
   str->str = format;
@@ -29,4 +29,5 @@ void		_init_structures(t_flag *flags,
   _init_flag('o', &_convert_octal, &flags[9]);
   _init_flag('u', &_convert_decimal, &flags[10]);
   _init_flag('p', &_ptr_to_hex, &flags[11]);
+  return ;
 }

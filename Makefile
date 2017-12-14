@@ -33,7 +33,7 @@ $(LIB):
 	make -C $(LDIR)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) -L lib -l $(LNAME)
+	$(CC) -o $(NAME) $(OBJS) -L $(LDIR) -l $(LNAME)
 
 clean:
 	$(RM) $(OBJS)

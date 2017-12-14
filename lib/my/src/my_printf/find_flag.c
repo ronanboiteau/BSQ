@@ -1,8 +1,9 @@
+#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
 
-static int	_find_extra_chars(t_string *str)
+static int	_find_extra_chars(t_cstring *str)
 {
   char		extra_char;
 
@@ -17,13 +18,13 @@ static int	_find_extra_chars(t_string *str)
   return (extra_char);
 }
 
-static uint	_add_extra_spaces(t_string *str,
+static t_uint	_add_extra_spaces(t_cstring *str,
 				  char extra_char,
 				  int fd,
 				  va_list ap)
 {
-  va_list		ap_tmp;
-  uint		printed;
+  va_list	ap_tmp;
+  t_uint	printed;
 
   printed = 0;
   *ap_tmp = *ap;
@@ -40,8 +41,8 @@ static uint	_add_extra_spaces(t_string *str,
   return (printed);
 }
 
-const char	*_find_flag(t_string *str,
-			    uint *printed,
+const char	*_find_flag(t_cstring *str,
+			    t_uint *printed,
 			    int fd,
 			    va_list ap)
 {

@@ -1,3 +1,4 @@
+#include <limits.h>
 #include "my.h"
 
 static int	_skip_letters(const char *str)
@@ -8,8 +9,7 @@ static int	_skip_letters(const char *str)
   while (str[idx] && str[idx] != '-' && str[idx] != '+' &&
 	 (str[idx] < '0' || str[idx] > '9'))
     idx += 1;
-  while ((str[idx + 1] && (str[idx + 1] == '-' ||
-			     str[idx + 1] == '+'))
+  while ((str[idx + 1] && (str[idx + 1] == '-' || str[idx + 1] == '+'))
 	 || str[idx] == '+')
     idx += 1;
   return (idx);
@@ -27,16 +27,12 @@ static int	_set_reverser(const char *str, int *idx)
 
 int		my_atoi(const char *str)
 {
-  ll		result;
+  t_ll		result;
   int		reverser;
   int		idx;
   int		lenght;
-  int		int_min;
-  int		int_max;
 
   result = 0;
-  int_min = -2147483648;
-  int_max = 2147483647;
   idx = _skip_letters(str);
   reverser = _set_reverser(str, &idx);
   lenght = idx;
@@ -44,9 +40,9 @@ int		my_atoi(const char *str)
     lenght += 1;
   while (idx < lenght)
     {
-      result = result + (ll)((str[idx] - '0') *
-			     my_power(10, lenght - idx - 1));
-      if (result < int_min || result - 1 > int_max)
+      result = result + (t_ll)((str[idx] - '0') *
+			       my_power(10, lenght - idx - 1));
+      if (result < INT_MIN || result - 1 > INT_MAX)
 	return (0);
       idx += 1;
     }

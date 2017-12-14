@@ -1,9 +1,10 @@
+#include <stdlib.h>
 #include "my.h"
 #include "printf_puts.h"
 
 int		my_showstr(int fd, const char *str)
 {
-  uint		idx;
+  t_uint	idx;
 
   idx = 0;
   if (str == NULL)

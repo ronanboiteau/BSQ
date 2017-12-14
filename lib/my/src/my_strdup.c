@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "my.h"
 
 char		*my_strdup(const char *src)
@@ -6,11 +7,13 @@ char		*my_strdup(const char *src)
   int		idx;
   char		*new_str;
 
+  if (src == NULL)
+    return (NULL);
   idx = 0;
   lenght = my_strlen(src);
-  if ((new_str = malloc(sizeof(*new_str) * lenght + 1)) == NULL)
-    my_exit(EXIT_FAILURE, ERR_MALLOC);
-  while (src[idx] != '\0')
+  if ((new_str = malloc(sizeof(char) * (lenght + 1))) == NULL)
+    my_exit(EXIT_FAILURE, "ERROR: Out of memory! malloc() failed\n");
+  while (src[idx])
     {
       new_str[idx] = src[idx];
       idx += 1;

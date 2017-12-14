@@ -1,6 +1,8 @@
+#include <stdlib.h>
+#include <unistd.h>
 #include "my.h"
 
-uint		my_putstr_fd(int fd, const char *str)
+t_uint		my_putstr_fd(int fd, const char *str)
 {
   if (str == NULL)
     {
@@ -11,7 +13,7 @@ uint		my_putstr_fd(int fd, const char *str)
   return (my_strlen(str));
 }
 
-uint		my_putstr(const char *str)
+t_uint		my_putstr(const char *str)
 {
   return (my_putstr_fd(STDOUT, str));
 }

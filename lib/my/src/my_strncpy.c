@@ -1,11 +1,11 @@
 #include "my.h"
 
-char		*my_strncpy(char *dest, const char *src, uint nbr)
+char		*my_strncpy(char *dest, const char *src, t_uint nbr)
 {
-  uint		idx;
+  t_uint	idx;
 
   idx = 0;
-  while (src[idx] != '\0' && idx < nbr)
+  while (idx < nbr && src[idx])
     {
       dest[idx] = src[idx];
       idx += 1;

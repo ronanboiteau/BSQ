@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include "my.h"
 #include "printf_flags.h"
 
@@ -17,15 +18,13 @@ int		_char_isflag(const char letter, const t_flag *flags)
 
 int		_char_isletter(const char letter)
 {
-  if ((letter >= 'a' && letter <= 'z') ||
-      (letter >= 'A' && letter <= 'Z') ||
-      letter == '/' || letter == '{' ||
-      letter == '\n' || letter == '%' ||
-      letter == '}' || letter == '=' ||
-      letter == ':' || letter == ',' ||
-      letter == ';' || letter == '[' ||
-      letter == ']' || letter == '(' ||
-      letter == ')' || letter == 'l')
-    return (TRUE);
-  return (FALSE);
+  return ((letter >= 'a' && letter <= 'z') ||
+	  (letter >= 'A' && letter <= 'Z') ||
+	  letter == '/' || letter == '{' ||
+	  letter == '\n' || letter == '%' ||
+	  letter == '}' || letter == '=' ||
+	  letter == ':' || letter == ',' ||
+	  letter == ';' || letter == '[' ||
+	  letter == ']' || letter == '(' ||
+	  letter == ')' || letter == 'l');
 }

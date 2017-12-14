@@ -2,12 +2,12 @@
 
 char		*my_strncat(char *dest, const char *src, int nbr)
 {
- int		idx_dest;
- int		idx_src;
+  int		idx_dest;
+  int		idx_src;
 
   idx_dest = my_strlen(dest);
   idx_src = 0;
-  while (src[idx_src] && idx_src < nbr)
+  while (idx_src < nbr && src[idx_src])
     {
       dest[idx_dest] = src[idx_src];
       idx_dest += 1;

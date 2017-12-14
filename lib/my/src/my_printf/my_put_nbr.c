@@ -1,9 +1,9 @@
 #include "my.h"
 #include "printf_puts.h"
 
-uint		my_put_nbr_fd(int fd, int nbr)
+t_uint		my_put_nbr_fd(int fd, int nbr)
 {
-  uint		printed;
+  t_uint	printed;
 
   printed = 0;
   if (nbr == -2147483648)
@@ -28,9 +28,9 @@ uint		my_put_nbr_fd(int fd, int nbr)
   return (printed);
 }
 
-uint		my_putnbr_printf(int fd, int nbr)
+t_uint		my_putnbr_printf(int fd, int nbr)
 {
-  uint		printed;
+  t_uint	printed;
 
   printed = 0;
   if (nbr == -2147483648)

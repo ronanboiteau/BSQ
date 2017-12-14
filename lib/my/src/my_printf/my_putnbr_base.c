@@ -1,10 +1,10 @@
 #include "my.h"
 #include "printf_puts.h"
 
-uint		my_putnbr_base_fd(int fd, uint nbr, const char *base)
+t_uint		my_putnbr_base_fd(int fd, t_uint nbr, const char *base)
 {
-  uint	base_int;
-  uint	printed;
+  t_uint	base_int;
+  t_uint	printed;
 
   printed = 0;
   base_int = 0;
@@ -18,10 +18,10 @@ uint		my_putnbr_base_fd(int fd, uint nbr, const char *base)
   return (printed);
 }
 
-uint	my_putnbr_base_ull(int fd, ull nbr, const char *base)
+t_uint		my_putnbr_base_ull(int fd, t_ull nbr, const char *base)
 {
-  uint	base_int;
-  uint	printed;
+  t_uint	base_int;
+  t_uint	printed;
 
   printed = 0;
   base_int = 0;

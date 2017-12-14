@@ -2,7 +2,7 @@
 
 char		*my_strupcase(char *str)
 {
-  uint		idx;
+  t_uint	idx;
 
   idx = 0;
   while (str[idx] != '\0')

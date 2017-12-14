@@ -1,9 +1,12 @@
+#include <stdlib.h>
 #include "my.h"
 
 int		my_strcmp(const char *str1, const char *str2)
 {
-  uint		idx;
+  t_uint	idx;
 
+  if (str1 == NULL || str2 == NULL)
+    return (-1);
   idx = 0;
   while (str1[idx] != '\0' && str2[idx] != '\0')
     {

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "my.h"
 
 char		*my_strstr(char *str, const char *to_find)
