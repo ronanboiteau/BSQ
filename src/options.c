@@ -1,17 +1,20 @@
+#include <stdbool.h>
+#include <stdlib.h>
+#include "bsq_board.h"
 #include "my.h"
 
 int		_is_option_active(const char *opt_list, const char option)
 {
-  uint		idx;
+  unsigned int	idx;
 
   idx = 0;
   while (opt_list != NULL && opt_list[idx])
     {
       if (opt_list[idx] == option)
-	return (TRUE);
+	return (true);
       idx += 1;
     }
-  return (FALSE);
+  return (false);
 }
 
 static void	_check_options_exit(char *opt,
@@ -20,14 +23,14 @@ static void	_check_options_exit(char *opt,
 {
   free(opt);
   free(authorized_opt);
-  my_exit(EXIT_FAILURE, "bsq: invalid option -- '%c'" EOL, wrong_opt);
+  my_exit(EXIT_FAILURE, "bsq: invalid option -- '%c'\n", wrong_opt);
   return ;
 }
 
 static void	_check_options(char *opt)
 {
-  uint		idx;
-  uint		idx_auth;
+  unsigned int	idx;
+  unsigned int	idx_auth;
   int		found_opt;
   char		*authorized_opt;
 
@@ -36,14 +39,14 @@ static void	_check_options(char *opt)
   while (opt != NULL && opt[idx])
     {
       idx_auth = 0;
-      found_opt = FALSE;
+      found_opt = false;
       while (authorized_opt[idx_auth])
 	{
 	  if (opt[idx] == authorized_opt[idx_auth])
-	    found_opt = TRUE;
+	    found_opt = true;
 	  idx_auth += 1;
 	}
-      if (found_opt == FALSE)
+      if (found_opt == false)
 	{
 	  if (!my_strstr(opt, "-help"))
 	    _check_options_exit(opt, authorized_opt, opt[idx]);
@@ -55,7 +58,7 @@ static void	_check_options(char *opt)
 
 char		*_get_options(char **argv)
 {
-  uint		idx;
+  unsigned int	idx;
   char		*new_opt;
   char		*options;
 
@@ -73,7 +76,7 @@ char		*_get_options(char **argv)
 	    my_strncpy(new_opt, options, my_strlen(options));
 	  free(options);
 	  options = my_strncat(new_opt, argv[idx] + 1,
-	  		       my_strlen(argv[idx] + 1));
+			       my_strlen(argv[idx] + 1));
 	}
       idx += 1;
     }

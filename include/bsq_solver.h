@@ -6,9 +6,9 @@
 
 typedef struct	s_coords
 {
-  uint		line;
-  uint		column;
-  uint		size;
+  unsigned int	line;
+  unsigned int	column;
+  unsigned int	size;
 }		t_coords;
 
 void		_solve(const t_board *board, t_coords *square);

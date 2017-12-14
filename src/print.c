@@ -1,3 +1,5 @@
+#include <stdbool.h>
+#include <stdlib.h>
 #include "my.h"
 #include "bsq_board.h"
 #include "bsq_solver.h"
@@ -5,8 +7,8 @@
 
 static void	_draw_square(const t_coords *square, char **final_board)
 {
-  uint		idx_line;
-  uint		idx_col;
+  unsigned int	idx_line;
+  unsigned int	idx_col;
 
   idx_line = 0;
   while (idx_line < square->size)
@@ -24,7 +26,7 @@ static void	_draw_square(const t_coords *square, char **final_board)
 
 static void	_print_this_char(const char this_char, int color_mode)
 {
-  if (color_mode == TRUE)
+  if (color_mode == true)
     {
       if (this_char == 'x')
 	my_printf(COLOR_CROSS "%c" RESET, this_char);
@@ -44,8 +46,8 @@ void		_print_result(const t_coords *square,
 			      const t_board *board,
 			      int color_mode)
 {
-  uint		idx_line;
-  uint		idx_col;
+  unsigned int	idx_line;
+  unsigned int	idx_col;
   char		**final_board;
 
   if ((final_board = malloc(sizeof(char *) * board->lines)) == NULL)
@@ -56,6 +58,7 @@ void		_print_result(const t_coords *square,
       final_board[idx_line] = my_strdup(board->tab[idx_line]);
       idx_line += 1;
     }
+  final_board[idx_line] = NULL;
   _draw_square(square, final_board);
   idx_line = 0;
   while (idx_line < board->lines)
@@ -68,5 +71,5 @@ void		_print_result(const t_coords *square,
 	}
       idx_line += 1;
     }
-  my_free_2d_tab(final_board, board->lines);
+  my_free_2d_tab(final_board);
 }
