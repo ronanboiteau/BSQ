@@ -14,6 +14,7 @@ C program that finds the biggest square in a map using a homemade algorithm.
 Navigate to the root of the repository from your Terminal and run `make` to build the `bsq` executable file.
 
 ## How to use BSQ?
+
 Pass a map file to the program as an argument when running BSQ:
 ```
 ./bsq map.txt
@@ -37,6 +38,7 @@ perl gen_map.pl [COLS] [LINES] [DENSITY]
 ```
 
 ## Options
+
  - `-v`: verbose mode
  - `-c`: enable colorized output
 
